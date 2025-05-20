@@ -1,3 +1,13 @@
 <template>
+   <AppHeader />
+
   <h1>Welcome to the Yoga Center</h1>
+  
+  <AppFooter />
 </template>
+
+<script setup>
+import AppHeader from '@/components/header.vue'
+import AppFooter from '@/components/footer.vue'
+
+</script>

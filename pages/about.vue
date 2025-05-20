@@ -1,4 +1,6 @@
 <template>
+    <AppHeader />
+    
   <h1>Welcome to the Yoga Center</h1>
   <h2> Our story</h2>
   <p> Our yoga center was born from a deep passion for sharing the physical, 
@@ -14,6 +16,14 @@
      or experience, fostering an inclusive and judgment-free space.</p>
   <h2>Our goal</h2>
   <h2>Join our Family</h2>
-  <p>At Om Yoga Centre, we don’t just teach yoga—we share a way of life. We invite you to discover how this practice can transform
+  <p>At Om Yoga Centre, we don't just teach yoga—we share a way of life. We invite you to discover how this practice can transform
      your daily routine. Your journey to harmony starts here!</p>
+
+     <AppFooter />
 </template>
+
+<script setup>
+import AppHeader from '@/components/header.vue'
+import AppFooter from '@/components/footer.vue'
+
+</script>
