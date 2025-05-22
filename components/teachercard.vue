@@ -61,4 +61,10 @@ export default{
         margin-bottom: 8px;
         line-height: 1.4;
     }
+     .teacher-teaches{
+        font-size: 14px;
+        color: #444;
+        margin-bottom: 8px;
+        line-height: 1.4;
+    }
 </style>
