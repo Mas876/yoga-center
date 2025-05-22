@@ -1,24 +1,12 @@
 <template>
-  <v-footer color="green-darken-4" class="mt-16">
+  <v-footer color="blue-grey-darken-3" class="white-text">
     <v-container>
-      <v-row>
-        <v-col cols="12" md="6">
-          <div class="text-h5 font-weight-bold mb-4">Om Yoga Centre</div>
-          <div>Via Garibaldi 8, 20121 Milan</div>
-        </v-col>
-        
-        <v-col cols="12" md="6" class="text-md-right">
-          <div class="mb-4">
-            <v-btn icon variant="text" href="#">
-              <v-icon>mdi-instagram</v-icon>
-            </v-btn>
-            <v-btn icon variant="text" href="#">
-              <v-icon>mdi-facebook</v-icon>
-            </v-btn>
-          </div>
-          <div>© 2025-Om Yoga Center - All rights reserved</div>
-        </v-col>
-      </v-row>
+      <div>
+        Om Yoga Centre<br />
+        Via Garibaldi 9, 20121 Milan<br />
+        Follow us on <a href="https://www.instagram.com/" class="text-white">Instagram</a> <a> / </a> <a href="https://www.facebook.com/" class="text-white">Facebook</a><br />
+        © 2025 · Om Yoga Center - All rights reserved
+      </div>
     </v-container>
   </v-footer>
 </template>
