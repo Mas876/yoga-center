@@ -1,9 +1,9 @@
 <template>
-    <div class = "teacher card">
-        <img : src = "photo" alt = "teacher card" class = "teachercard" />
-        <h2 class = "name">{{ name }}</h2>
-        <h4 class = "description">{{description}}</h4>
-        <h4 class = "teaches">{{teaches}}</h4>
+    <div class = "teacher-card">
+        <img :src="photo" alt="`Photo of ${name}`" class="teacher-photo"/>
+        <h2 class = "teacher-name">{{ name }}</h2>
+        <h4 class = "teacher-description">{{description}}</h4>
+        <h4 class = "teacher-teaches">{{teaches}}</h4>
     </div>
 </template>
 
@@ -31,7 +31,7 @@ export default{
 };
 </script>
 
-<style>
+<style scoped>
     .teacher-card{
         border-radius: 12px;
         padding: 24px;
@@ -48,6 +48,7 @@ export default{
         border-radius: 50%;
         margin-bottom: 16px;
         border: 4px solid #e0e0e0;
+        
     }
     .teacher-name{
         font-size: 20px;
@@ -55,16 +56,12 @@ export default{
         margin: 8px 0 12px;
         color: #222;
     }
-    .teacher-description{
+    .teacher-description,
+        .teacher-teaches{
         font-size: 14px;
         color: #444;
         margin-bottom: 8px;
-        line-height: 1.4;
+        line-height: 1.5;
     }
-     .teacher-teaches{
-        font-size: 14px;
-        color: #444;
-        margin-bottom: 8px;
-        line-height: 1.4;
-    }
+        
 </style>
