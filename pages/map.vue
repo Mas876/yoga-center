@@ -3,7 +3,7 @@
 
   <h1>Welcome to the Yoga Center</h1>
 
-  <v-img src="./map.png" alt="Imagen local"></v-img>
+  <v-img src="/images/map.png" alt="Imagen local"></v-img>
   
   <AppFooter />
 </template>
