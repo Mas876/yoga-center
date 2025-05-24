@@ -1,3 +1,4 @@
+<!--This is the footer of the website-->
 <template>
   <v-footer color="blue-grey-darken-3" class="white-text">
     <v-container>
