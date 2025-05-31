@@ -4,12 +4,32 @@
             v-for="activity in activities"
             :key="activity.id"
             v-bind="activity"
+            @click="redirectToTeachers"
         />
     </div>
 </template>
 
+
+<script setup>
+import { useRouter } from 'vue-router';
+
+const router = useRouter();
+
+const redirectToTeachers = () => {
+  router.push('/teachers');
+};
+</script>
+
+<style scoped>
+.cursor-pointer {
+  cursor: pointer;
+}
+</style>
+
 <script>
 import ActivityCard from "@/components/activitycard.vue";
+
+
 
 export default{
     components: { ActivityCard },

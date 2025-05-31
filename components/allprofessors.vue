@@ -5,6 +5,7 @@
         v-for="teacher in topRow"
         :key="teacher.id"
         v-bind="teacher"
+        @click="redirectToActivities"
       />
     </div>
     <div class="bottom-row">
@@ -12,10 +13,23 @@
         v-for="teacher in bottomRow"
         :key="teacher.id"
         v-bind="teacher"
+        @click="redirectToActivities"
       />
     </div>
   </div>
 </template>
+
+
+<script setup>
+import { useRouter } from 'vue-router';
+
+const router = useRouter();
+
+const redirectToActivities = () => {
+  router.push('/activities');
+};
+</script>
+
 
 <script>
 import TeacherCard from "@/components/TeacherCard.vue";
