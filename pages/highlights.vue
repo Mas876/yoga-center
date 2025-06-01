@@ -1,6 +1,7 @@
 <template>
   <AppHeader />
   <h1>Welcome to the Yoga Center</h1>
+  <highlightstext/>
   <AppFooter />
 </template>
 
