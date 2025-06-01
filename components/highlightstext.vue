@@ -43,7 +43,7 @@ const topRow = [
       "Schedule:\nTeaching every morning from 6:00 a.m. to 7:00 a.m.,\n with Professor Ana Rodriguez.",
     duration:
       "Duration:\n Each session lasts 60 minutes, divided into:\n 10 minutes of conscious breathing and preparation.\n 40 minutes of guided meditation.10 minutes of closing reflection and gratitude.",
-    photo: "/images/highlight1.png",
+    photo: "/images/highlight1.jpeg",
   },
   {
     id: 2,
@@ -54,7 +54,7 @@ const topRow = [
       "Schedule:\n From Friday at 5:00 p.m. to Sunday at 12:00 p.m.\n with Professor Leo Kim",
     duration:
       "Duration:\n A total of 48 hours, including:\n Morning and afternoon yoga classes.\n Guided meditation at sunrise and sunset.\n Mindfulness and wellness workshops.\n Healthy meals and time for rest.",
-    photo: "/images/highlight2.png",
+    photo: "/images/highlight2.jpeg",
   },
 ];
 
@@ -68,7 +68,7 @@ const bottomRow = [
       "Schedule:\n Tuesdays and Thursdays from 7:00 p.m. to 8:00 p.m.,\n with Professor David Lee",
     duration:
       "Duration:\n Each session lasts 60 minutes, divided into:\n 10 minutes of warm-up and breathing.\n 40 minutes of fluid posture sequence.\n 10 minutes of relaxation and final meditation.",
-    photo: "/images/highlight3.png",
+    photo: "/images/highlight3.jpeg",
   },
   {
     id: 4,
@@ -79,7 +79,7 @@ const bottomRow = [
       "Schedule:\n One Saturday a month from 4:00 p.m. to 6:00 p.m.\n with Professor Sara Bloom",
     duration:
       "Duration:\n Each workshop lasts 2 hours and includes\n: Deep breathing techniques and guided relaxation.\n Restorative yoga and meditation practices.\n Sound therapy with Tibetan singing bowls and healing vibrations.",
-    photo: "/images/highlight4.png",
+    photo: "/images/highlight4.jpeg",
   },
 ];
 </script>
