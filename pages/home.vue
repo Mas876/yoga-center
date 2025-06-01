@@ -16,7 +16,7 @@
           <v-row>
             <v-col cols="12" md="6">
               <h1 class="text-h2 font-weight-bold mb-4" style="color: white !important;">Find your inner peace</h1>
-              <v-btn color="primary" size="large">Explore Our Activities</v-btn>
+              <v-btn color="primary" size="large" to="/activities">Explore Our Activities</v-btn>
             </v-col>
           </v-row>
         </v-container>

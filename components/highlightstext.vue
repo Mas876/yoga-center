@@ -1,5 +1,6 @@
 <template>
   <div class="highlights-layout">
+    <h2>Meet Our Teachers</h2>
     <div class="top-row">
       <div
         v-for="highlight in topRow"
