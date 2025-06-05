@@ -14,7 +14,7 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
-import ActivityCard from '@/components/ActivityCard.vue'
+import ActivityCard from '@/components/activitycard.vue'
 const { $supabase } = useNuxtApp()
 const activities = ref([])
 const loading = ref(true)
