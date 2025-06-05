@@ -30,7 +30,7 @@
 <script setup>
 import { ref, onMounted, computed } from 'vue'
 import { useRouter } from 'vue-router'
-import TeacherCard from '@/components/TeacherCard.vue'
+import TeacherCard from '@/components/teachercard.vue'
 
 const { $supabase } = useNuxtApp()
 const teachers = ref([])
