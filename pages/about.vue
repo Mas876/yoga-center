@@ -87,3 +87,15 @@ const goals = [
   }
 ]
 </script>
+
+<style scoped>
+  .box{
+    padding:10px;
+    background-color: lightblue;
+  }
+  @media (min-width:768px){
+    .box{
+      padding:30px;
+    }
+  }
+</style>
