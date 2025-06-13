@@ -14,3 +14,4 @@ import AppFooter from '@/components/footer.vue'
 import TeacherList from '@/components/allprofessors.vue'
 
 </script>
+

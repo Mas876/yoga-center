@@ -10,6 +10,7 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.49.10",
     "nuxt": "^3.17.3",
     "sass": "^1.88.0",
     "sass-loader": "^10.5.2",

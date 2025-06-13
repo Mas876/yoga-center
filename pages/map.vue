@@ -13,3 +13,4 @@ import AppHeader from '@/components/header.vue'
 import AppFooter from '@/components/footer.vue'
 
 </script>
+

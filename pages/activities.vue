@@ -14,3 +14,4 @@ import AppFooter from '@/components/footer.vue'
 import ActivitiesList from '@/components/allactivities.vue'
 
 </script>
+

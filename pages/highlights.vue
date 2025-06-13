@@ -10,3 +10,4 @@ import AppHeader from '@/components/header.vue'
 import AppFooter from '@/components/footer.vue'
 import highlightstext from '@/components/highlightstext.vue'
 </script>
+

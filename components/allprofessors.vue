@@ -4,7 +4,10 @@
       <TeacherCard
         v-for="teacher in topRow"
         :key="teacher.id"
-        v-bind="teacher"
+        :name="teacher.name"
+        :description="teacher.bio"
+        :teaches="teacher.teaches"
+        :photo="teacher.photo_url"
         @click="redirectToActivities"
       />
     </div>
@@ -12,80 +15,53 @@
       <TeacherCard
         v-for="teacher in bottomRow"
         :key="teacher.id"
-        v-bind="teacher"
+        :name="teacher.name"
+        :description="teacher.bio"
+        :teaches="teacher.teaches"
+        :photo="teacher.photo_url"
         @click="redirectToActivities"
       />
     </div>
+    <div v-if="loading" class="loading">Loading teachers...</div>
+    <div v-if="error" class="error">Error loading teachers.</div>
   </div>
 </template>
 
-
 <script setup>
-import { useRouter } from 'vue-router';
+import { ref, onMounted, computed } from 'vue'
+import { useRouter } from 'vue-router'
+import TeacherCard from '@/components/teachercard.vue'
 
-const router = useRouter();
+const { $supabase } = useNuxtApp()
+const teachers = ref([])
+const loading = ref(true)
+const error = ref(null)
 
+const fetchTeachers = async () => {
+  loading.value = true
+  const { data, error: fetchError } = await $supabase
+    .from('teachers')
+    .select('*')
+     console.log('Supabase fetch result:', { data, fetchError })
+  if (fetchError) {
+    console.error(fetchError)
+    error.value = fetchError
+    loading.value = false
+    return
+  }
+  teachers.value = data
+  loading.value = false
+}
+
+onMounted(fetchTeachers)
+
+const topRow = computed(() => teachers.value.slice(0, 3))
+const bottomRow = computed(() => teachers.value.slice(3))
+
+const router = useRouter()
 const redirectToActivities = () => {
-  router.push('/activities');
-};
-</script>
-
-
-<script>
-import TeacherCard from "@/components/TeacherCard.vue";
-
-export default {
-  components: { TeacherCard },
-  data() {
-    return {
-      topRow: [
-        {
-          id: 1,
-          name: "Ana Rodriguez",
-          description:
-            "Certified Hatha Yoga instructor with 10+ years of experience. Specializes in mindful movement and breathing techniques.",
-          teaches:
-            "Hatha Yoga, Yoga for Beginners, Weekend Yoga Retreat",
-          photo: "/images/id1.png",
-        },
-        {
-          id: 2,
-          name: "Leo Kim",
-          description:
-            "Experienced yoga teacher with a focus on balance, flexibility and breath. Trained in Yin Yoga and restorative practices.",
-          teaches: "Yin Yoga, Weekend Yoga Retreat",
-          photo: "/images/id2.png",
-        },
-        {
-          id: 3,
-          name: "Emily Stone",
-          description:
-            "Meditation and mindfulness expert with a background in psychology. Loves guiding early morning sessions to start the day with clarity.",
-          teaches: "Sunrise Meditation",
-          photo: "/images/id3.png",
-        },
-      ],
-      bottomRow: [
-        {
-          id: 4,
-          name: "David Lee",
-          description:
-            "Dynamic Vinyasa instructor passionate about creative flows and body alignment. Background in physical therapy and anatomy.",
-          teaches: "Vinyasa Flow",
-          photo: "/images/id4.png",
-        },
-        {
-          id: 5,
-          name: "Sara Bloom",
-          description:
-            "Calm and compassionate yoga teacher focusing on stress relief and emotional balance. Specialist in Yoga Nidra and breathing techniques.",
-          teaches: "Deep Relaxation Workshop, Yoga for Stress Relief",
-          photo: "/images/id5.png",
-        },
-      ],
-    };
-  },
-};
+  router.push('/activities')
+}
 </script>
 
 <style scoped>
@@ -97,18 +73,21 @@ export default {
   align-items: center;
   gap: 40px;
 }
-
-.top-row {
-  display: flex;
-  justify-content: center;
-  gap: 32px;
-  flex-wrap: wrap;
-}
-
+.top-row,
 .bottom-row {
   display: flex;
   justify-content: center;
   gap: 32px;
   flex-wrap: wrap;
+}
+.loading {
+  color: white;
+  font-weight: bold;
+  margin-top: 20px;
+}
+.error {
+  color: red;
+  font-weight: bold;
+  margin-top: 20px;
 }
 </style>
