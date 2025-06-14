@@ -39,17 +39,40 @@ const error = ref(null)
 
 const fetchTeachers = async () => {
   loading.value = true
-  const { data, error: fetchError } = await $supabase
+
+  const { data: teachersRaw, error: e1 } = await $supabase
     .from('teachers')
-    .select('*')
-     console.log('Supabase fetch result:', { data, fetchError })
-  if (fetchError) {
-    console.error(fetchError)
-    error.value = fetchError
-    loading.value = false
-    return
-  }
-  teachers.value = data
+    .select('id, name, bio, photo_url')
+
+  if (e1) { error.value = e1; loading.value = false; return }
+
+  
+  const { data: links, error: e2 } = await $supabase
+    .from('teacher_activities')
+    .select('teacher_id, activity_id')
+
+  if (e2) { error.value = e2; loading.value = false; return }
+
+  const { data: acts, error: e3 } = await $supabase
+    .from('activities')
+    .select('id, name')    
+
+  if (e3) { error.value = e3; loading.value = false; return }
+
+  const nameById = Object.fromEntries(acts.map(a => [a.id, a.name]))
+  const namesByTeacher = {}
+  links.forEach(l => {
+    (namesByTeacher[l.teacher_id] ||= []).push(nameById[l.activity_id])
+  })
+
+  teachers.value = teachersRaw.map(t => ({
+    id:        t.id,
+    name:      t.name,
+    bio:       t.bio,
+    photo_url: t.photo_url,
+    teaches:   (namesByTeacher[t.id] || []).join(', ')
+  }))
+
   loading.value = false
 }
 
