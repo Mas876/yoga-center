@@ -32,8 +32,9 @@
               <v-img
                 :src="activity.image"
                 height="200"
+                alt="activity"
                 cover
-                class="mb-4"
+                class="mb-4 pointer"
               ></v-img>
               <v-card-title class="text-h6">{{ activity.title }}</v-card-title>
             </v-card>
@@ -58,3 +59,9 @@ const activities = [
 ]
 </script>
 
+ <style scoped>
+
+.pointer {
+  cursor: pointer;
+}
+</style>
