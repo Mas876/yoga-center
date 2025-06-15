@@ -113,4 +113,9 @@ const bottomRow = computed(() => highlights.value.slice(2, 4))
   font-weight: bold;
   margin-top: 20px;
 }
+
+.pointer {
+  cursor: pointer;
+}
+
 </style>

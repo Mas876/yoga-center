@@ -1,7 +1,7 @@
 <!--This is the header of the website-->
 <template>
   
-   <v-toolbar-title>Om Yoga Centre</v-toolbar-title>
+   <v-img src="images/logo.jpeg" max-height="100" max-width="150"></v-img>
 
   <v-spacer></v-spacer>
   
@@ -18,3 +18,10 @@
     
     
 </template>
+
+ <style scoped>
+
+.pointer {
+  cursor: pointer;
+}
+</style>

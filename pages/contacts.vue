@@ -1,10 +1,12 @@
 <template>
+   <div style="background-color: #6a953c;">
   <!-- Navbar -->
   <AppHeader />
   <!--Text for Contacts-->
   <AppContact/>
   <!-- Footer -->
   <AppFooter />
+  </div>
 </template>
 
 

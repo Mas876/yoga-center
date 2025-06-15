@@ -1,4 +1,5 @@
 <template>
+   <div style="background-color: #6a953c;">
   <AppHeader />
   <h1>Welcome to the Yoga Center</h1>
   <section id= "activities">
@@ -6,6 +7,7 @@
     <ActivitiesList />
   </section>
   <AppFooter />
+  </div>
 </template>
 
 <script setup>

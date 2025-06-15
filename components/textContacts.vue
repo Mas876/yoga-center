@@ -6,26 +6,25 @@
 
     <!-- Main content -->
     <v-container>
-      <v-row>
-        <v-col cols="12" md="4">
+        <v-row cols="12" md="4">
           <v-card class="pa-4" color="#6a953c" flat to="/map">
             <h2 class="text-wrapper-7">Find us</h2>
-            <address class="via-garibaldi">
+            <address class="via-garibaldi pointer">
               Via Garibaldi 9, 20121 Milan, Italy<br />
               (Near Sempione Park, in the city center)
             </address>
           </v-card>
-        </v-col>
-        <v-col cols="12" md="4">
+        </v-row>
+        <v-row cols="12" md="4">
           <v-card class="pa-4" color="#6a953c" flat>
             <h2 class="text-wrapper-8">Contact info</h2>
             <p class="element-info">
-              <a href="tel:+390212345678">+39 02 1234 5678</a><br />
-              <a href="mailto:info@omyoga.com">info@omyoga.com</a>
+              <a class="pointer" href="tel:+390212345678">+39 02 1234 5678</a><br />
+              <a class="pointer"href="mailto:info@omyoga.com">info@omyoga.com</a>
             </p>
           </v-card>
-        </v-col>
-        <v-col cols="12" md="4">
+        </v-row>
+        <v-row cols="12" md="4">
           <v-card class="pa-4" color="#6a953c" flat>
             <h2 class="text-wrapper-9">Opening Hours</h2>
             <p class="monday-friday">
@@ -33,8 +32,8 @@
               Saturday: 9:00 AM - 3:00 PM
             </p>
           </v-card>
-        </v-col>
-      </v-row>
+        </v-row>
+      
     </v-container>
 
     
@@ -44,6 +43,11 @@
   </template>
 
   <style scoped>
+
+.pointer {
+  cursor: pointer;
+}
+
 .contact {
   background-color: #6a953c;;
 }
