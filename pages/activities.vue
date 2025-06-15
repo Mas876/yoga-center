@@ -15,3 +15,4 @@ import ActivitiesList from '@/components/allactivities.vue'
 
 </script>
 
+
