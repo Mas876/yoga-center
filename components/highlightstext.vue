@@ -1,6 +1,6 @@
 <template>
   <div class="highlights-layout">
-    <h2>Highlights</h2>
+    <h1 style="font-size: 2rem; font-weight: bold; margin-bottom: 1.5rem;" class="text-white">Highlights</h1>
     <div class="top-row">
       <div
         v-for="highlight in topRow"
@@ -63,7 +63,7 @@ const bottomRow = computed(() => highlights.value.slice(2, 4))
 
 <style scoped>
 .highlights-layout {
-  background-color: #7a9a3d;
+  background-color: #6a953c;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -77,7 +77,7 @@ const bottomRow = computed(() => highlights.value.slice(2, 4))
   flex-wrap: wrap;
 }
 .highlight-card {
-  background-color: #7a9a3d;
+  background-color: #6a953c;
   color: white;
   padding: 1rem;
   border-radius: 10px;

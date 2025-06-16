@@ -5,6 +5,7 @@
       :key="activity.id"
       v-bind="activity"
       @click="redirectToTeachers"
+      class="pointer"
     />
     <div v-if="loading">Loading activities...</div>
     <div v-if="error" style="color: red;">Error loading activities</div>
@@ -51,4 +52,10 @@ const redirectToTeachers = () => {
   justify-content: center;
   background-color: #6a953c;
 }
+
+
+.pointer {
+  cursor: pointer;
+}
+
 </style>

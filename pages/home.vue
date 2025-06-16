@@ -5,7 +5,8 @@
     <v-main style="background-color: #6a953c;">
 
       
-      <v-sheet
+        <h1>Welcome to the Yoga Center</h1>
+        <v-sheet
   :style="'background: url(/images/home1.jpeg) no-repeat center center; background-size: cover;'"
   height="500"
   class="d-flex align-center"

@@ -1,9 +1,9 @@
 <template>
    <div style="background-color: #6a953c;">
   <AppHeader />
-  <h1>Welcome to the Yoga Center</h1>
   <section id= "activities">
-    <h2>Meet our activities</h2>
+    <h1 style="font-size: 2rem; font-weight: bold; margin-bottom: 1.5rem; margin-left: 2.5rem;" class="text-white">Meet our activities</h1>
+
     <ActivitiesList />
   </section>
   <AppFooter />

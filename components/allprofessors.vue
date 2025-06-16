@@ -1,7 +1,7 @@
 <template>
   <div class="teachers-layout">
     <div class="top-row">
-      <TeacherCard
+      <TeacherCard class="pointer"
         v-for="teacher in topRow"
         :key="teacher.id"
         :name="teacher.name"
@@ -12,14 +12,15 @@
       />
     </div>
     <div class="bottom-row">
-      <TeacherCard
+      <TeacherCard class="pointer"
         v-for="teacher in bottomRow"
         :key="teacher.id"
-        :name="teacher.name"
+        :name="teacher.name" 
         :description="teacher.bio"
         :teaches="teacher.teaches"
         :photo="teacher.photo_url"
         @click="redirectToActivities"
+
       />
     </div>
     <div v-if="loading" class="loading">Loading teachers...</div>
@@ -88,6 +89,11 @@ const redirectToActivities = () => {
 </script>
 
 <style scoped>
+
+.pointer {
+  cursor: pointer;
+}
+
 .teachers-layout {
   background-color: #6a953c;
   padding: 40px;
