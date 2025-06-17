@@ -61,7 +61,7 @@
 .text-wrapper {
   font-family: "Open Sans", Helvetica;
   font-weight: 400;
-  font-size: 30px;
+  font-size: 40px;
   color: #ffffff;
 }
 
@@ -70,7 +70,7 @@
 .monday-friday,
 .om-yoga-centre-via {
   font-family: "Open Sans", Helvetica;
-  font-size: 20px;
+  font-size: 30px;
   color: #ffffff;
 }
 </style>
