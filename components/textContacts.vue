@@ -8,7 +8,7 @@
     <v-container>
         <v-row cols="12" md="4">
           <v-card class="pa-4" color="#6a953c" flat to="/map">
-            <h2 class="text-wrapper-7">Find us</h2>
+            <h2 class="text-wrapper">Find us</h2>
             <address class="via-garibaldi pointer">
               Via Garibaldi 9, 20121 Milan, Italy<br />
               (Near Sempione Park, in the city center)
@@ -17,7 +17,7 @@
         </v-row>
         <v-row cols="12" md="4">
           <v-card class="pa-4" color="#6a953c" flat>
-            <h2 class="text-wrapper-8">Contact info</h2>
+            <h2 class="text-wrapper">Contact info</h2>
             <p class="element-info">
               <a class="pointer" href="tel:+390212345678">+39 02 1234 5678</a><br />
               <a class="pointer"href="mailto:info@omyoga.com">info@omyoga.com</a>
@@ -26,7 +26,7 @@
         </v-row>
         <v-row cols="12" md="4">
           <v-card class="pa-4" color="#6a953c" flat>
-            <h2 class="text-wrapper-9">Opening Hours</h2>
+            <h2 class="text-wrapper">Opening Hours</h2>
             <p class="monday-friday">
               Monday - Friday: 8:00 AM - 8:00 PM<br />
               Saturday: 9:00 AM - 3:00 PM
@@ -58,10 +58,8 @@
   z-index: 100;
 }
 
-.text-wrapper-7,
-.text-wrapper-8,
-.text-wrapper-9 {
-  font-family: "Montserrat", Helvetica;
+.text-wrapper {
+  font-family: "Open Sans", Helvetica;
   font-weight: 400;
   font-size: 30px;
   color: #ffffff;
@@ -69,14 +67,9 @@
 
 .via-garibaldi,
 .element-info,
-.monday-friday {
-  font-family: "Open Sans", Helvetica;
-  font-size: 20px;
-  color: #ffffff;
-}
-
+.monday-friday,
 .om-yoga-centre-via {
-  font-family: "Inter", Helvetica;
+  font-family: "Open Sans", Helvetica;
   font-size: 20px;
   color: #ffffff;
 }

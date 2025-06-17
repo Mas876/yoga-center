@@ -1,7 +1,12 @@
 <template>
    <div style="background-color: #6a953c;">
-  <AppHeader />
+     <!-- Navbar -->
+  <AppHeader /> 
+
+     <!-- Text of the highlights -->
   <highlightstext/>
+  
+  <!-- Footer -->
   <AppFooter />
   </div>
 </template>

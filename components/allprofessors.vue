@@ -1,4 +1,5 @@
 <template>
+  <!-- First row of teachers cards-->
   <div class="teachers-layout">
     <div class="top-row">
       <TeacherCard class="pointer"
@@ -11,6 +12,7 @@
         @click="redirectToActivities"
       />
     </div>
+    <!-- Second row of teachers cards-->
     <div class="bottom-row">
       <TeacherCard class="pointer"
         v-for="teacher in bottomRow"
@@ -23,6 +25,7 @@
 
       />
     </div>
+    <!-- Texts for loading and error-->
     <div v-if="loading" class="loading">Loading teachers...</div>
     <div v-if="error" class="error">Error loading teachers.</div>
   </div>
@@ -38,6 +41,7 @@ const teachers = ref([])
 const loading = ref(true)
 const error = ref(null)
 
+/* Function for fetching teachers */
 const fetchTeachers = async () => {
   loading.value = true
 

@@ -1,4 +1,5 @@
 <template>
+  <!-- Show every teacher card -->
   <div class="teacher-card">
     <img :src="photo" :alt="`Photo of ${name}`" class="teacher-photo"/>
     <h2 class="teacher-name">{{ name }}</h2>

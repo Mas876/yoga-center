@@ -1,10 +1,13 @@
 <!--This is the header of the website-->
 <template>
-  
-   <v-img src="images/logo.jpeg" max-height="100" max-width="150"></v-img>
+  <!-- LOgo of the yoga center -->
+        <v-toolbar color="#6a953c" >
+          <v-img src="images/logo.jpeg" alt="OmYoga Logo"max-height="100" max-width="150"></v-img>
+      <!--<v-toolbar-title>OM YOGA</v-toolbar-title>-->
+    </v-toolbar>
 
   <v-spacer></v-spacer>
-  
+  <!-- Toolbar -->
    <v-container>
       <v-row justify="center" align="center" no-gutters >
         <v-btn variant="text" to="/home" style="background-color: white;">Home</v-btn>

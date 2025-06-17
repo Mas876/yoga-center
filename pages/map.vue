@@ -1,11 +1,14 @@
 <template>
+  <div style="background-color: #6a953c;">
+   <!-- Navbar -->
    <AppHeader />
 
-  <h1>Welcome to the Yoga Center</h1>
-
+<!--Map of Milano-->
   <v-img src="/images/map.png" alt="Imagen local"></v-img>
   
+   <!-- Footer -->  
   <AppFooter />
+  </div>
 </template>
 
 <script setup>

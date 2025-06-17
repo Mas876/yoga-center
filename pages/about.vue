@@ -1,5 +1,6 @@
 <template>
   <div style="background-color: #6a953c;">
+     <!-- Navbar -->
     <AppHeader />
     
     <main style="max-width: 1200px; margin: 0 auto; padding: 20px; background-color: #6a953c;" class="text-white">
@@ -60,6 +61,7 @@
       </section>
     </main>
     
+     <!-- Footer -->
     <AppFooter />
   </div>
 </template>

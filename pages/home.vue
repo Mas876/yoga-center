@@ -1,17 +1,21 @@
 <template>
+  <html lang="en"></html>
   <div style="background-color: #6a953c;">
+     <!-- Navbar -->
     <AppHeader />
     <VApp>
     <v-main style="background-color: #6a953c;">
 
       
         <h1>Welcome to the Yoga Center</h1>
+
+           <!-- Photo of yoga in the montain -->
         <v-sheet
   :style="'background: url(/images/home1.jpeg) no-repeat center center; background-size: cover;'"
   height="500"
   class="d-flex align-center"
 >
-      <!--<v-sheet image="require('/images/home1.jpeg')" height="500" class="d-flex align-center">-->
+      <!--Text and buttom inside the photo-->
          
         <v-container>
           <v-row>
@@ -23,7 +27,7 @@
         </v-container>
       </v-sheet>
       
-      
+      <!-- List of the features activities-->
       <v-container class="my-16" >
         <h2 class="text-h4 font-weight-bold mb-8 text-center">Featured activities</h2>
         
@@ -51,6 +55,7 @@
 <script setup>
 import AppHeader from '@/components/header.vue'
 import AppFooter from '@/components/footer.vue'
+
 
 const activities = [
   { title: 'Sunrise meditation', image: '/images/sunrise.jpeg' },

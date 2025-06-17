@@ -1,3 +1,4 @@
+<!-- Cards of activities-->
 <template>
     <div class = "activity-card">
         <img :src="photo" alt="`Photo of ${name}`" class="activity-photo"/>

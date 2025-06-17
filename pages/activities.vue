@@ -1,11 +1,14 @@
 <template>
    <div style="background-color: #6a953c;">
+     <!-- Navbar -->
   <AppHeader />
   <section id= "activities">
     <h1 style="font-size: 2rem; font-weight: bold; margin-bottom: 1.5rem; margin-left: 2.5rem;" class="text-white">Meet our activities</h1>
-
+   
+    <!-- Activities list -->
     <ActivitiesList />
   </section>
+   <!-- Footer -->
   <AppFooter />
   </div>
 </template>

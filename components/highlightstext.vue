@@ -5,7 +5,8 @@
       <div
         v-for="highlight in topRow"
         :key="highlight.id"
-        class="highlight-card"
+        class="highlight-card pointer"
+        @click="redirectToTeachers"
       >
         <img :src="highlight.photo" :alt="'Photo of ' + highlight.name" class="highlight-photo" />
         <h2 class="highlight-name">{{ highlight.name }}</h2>
@@ -18,7 +19,8 @@
       <div
         v-for="highlight in bottomRow"
         :key="highlight.id"
-        class="highlight-card"
+        class="highlight-card pointer"
+        @click="redirectToTeachers"
       >
         <img :src="highlight.photo" :alt="'Photo of ' + highlight.name" class="highlight-photo" />
         <h2 class="highlight-name">{{ highlight.name }}</h2>
@@ -56,6 +58,11 @@ const fetchHighlights = async () => {
 }
 
 onMounted(fetchHighlights)
+
+const router = useRouter()
+const redirectToTeachers = () => {
+  router.push('/teachers')
+}
 
 const topRow = computed(() => highlights.value.slice(0, 2))
 const bottomRow = computed(() => highlights.value.slice(2, 4))
