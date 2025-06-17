@@ -1,6 +1,10 @@
 <!--This is the header of the website-->
 <template>
-  <html lang="en"></html>
+  <html lang="en">
+     <head>
+      <title>Om Yoga</title>
+    </head>
+  </html>
   <!-- LOgo of the yoga center -->
         <v-toolbar color="#6a953c" >
           <v-img src="images/logo.jpeg" alt="OmYoga Logo"max-height="100" max-width="150"></v-img>
