@@ -4,7 +4,7 @@
   <!-- LOgo of the yoga center -->
         <v-toolbar color="#6a953c" >
           <v-img src="images/logo.jpeg" alt="OmYoga Logo"max-height="100" max-width="150"></v-img>
-      <v-toolbar-title>OM YOGA</v-toolbar-title>
+      <v-toolbar-title class="text-h4">OM YOGA</v-toolbar-title>
     </v-toolbar>
 
   <v-spacer></v-spacer>
