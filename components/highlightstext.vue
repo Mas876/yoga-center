@@ -83,14 +83,20 @@ const bottomRow = computed(() => highlights.value.slice(2, 4))
   gap: 2rem;
   flex-wrap: wrap;
 }
+
 .highlight-card {
-  background-color: #6a953c;
-  color: white;
-  padding: 1rem;
-  border-radius: 10px;
+  background-color: #fff;  
+  color: #333;             
+  padding: 1.5rem;
+  border-radius: 18px;
   width: 45%;
   min-width: 300px;
+  box-shadow: 0 6px 24px rgba(52, 105, 30, 0.12);
+  transition: 
+    box-shadow 0.2s cubic-bezier(.25,.8,.25,1), 
+    transform 0.2s cubic-bezier(.25,.8,.25,1);
 }
+
 .highlight-photo {
   width: 120px;
   border-radius: 50%;
@@ -124,5 +130,32 @@ const bottomRow = computed(() => highlights.value.slice(2, 4))
 .pointer {
   cursor: pointer;
 }
+
+.highlight-card {
+  border: 2.5px solid #7fb800; 
+  position: relative;
+  overflow: hidden;
+}
+
+.highlight-card:hover {
+  box-shadow: 0 16px 48px rgba(52, 105, 30, 0.21);
+  transform: translateY(-8px) scale(1.04);
+  border-color: #33691e;
+  background-color: #f4ffe4;
+  transition:
+    box-shadow 0.22s cubic-bezier(.25,.8,.25,1),
+    transform 0.22s cubic-bezier(.25,.8,.25,1),
+    border-color 0.22s,
+    background-color 0.22s;
+}
+
+.highlight-photo {
+  transition: transform 0.32s cubic-bezier(.25,.8,.25,1);
+}
+
+.highlight-card:hover .highlight-photo {
+  transform: scale(1.09) rotate(-2deg);
+}
+
 
 </style>

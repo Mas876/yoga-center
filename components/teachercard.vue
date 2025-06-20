@@ -84,4 +84,25 @@ export default {
   display: block;
   margin-bottom: 4px;
 }
+.teacher-card {
+  transition:
+    box-shadow 0.2s cubic-bezier(.25,.8,.25,1),
+    transform 0.2s cubic-bezier(.25,.8,.25,1),
+    border-color 0.2s,
+    background-color 0.2s;
+}
+.teacher-card:hover {
+  box-shadow: 0 8px 32px rgba(106, 149, 60, 0.18);
+  transform: translateY(-8px) scale(1.03);
+  background-color: #f4ffe4;
+  border-color: #7fb800;
+  cursor: pointer;
+}
+.teacher-photo {
+  transition: transform 0.3s cubic-bezier(.25,.8,.25,1);
+}
+.teacher-card:hover .teacher-photo {
+  transform: scale(1.08) rotate(3deg);
+}
+
 </style>

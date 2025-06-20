@@ -66,4 +66,21 @@ export default{
         text-align: left;
         line-height: 1.5;
     }
+    .activity-card {
+  transition: box-shadow 0.2s cubic-bezier(.25,.8,.25,1), transform 0.2s cubic-bezier(.25,.8,.25,1), border-color 0.2s;
+}
+.activity-card:hover {
+  box-shadow: 0 8px 32px rgba(52, 105, 30, 0.25);
+  transform: translateY(-8px) scale(1.03);
+  border-color: #7fb800;
+  background-color: #f4ffe4;
+  cursor: pointer;
+}
+.activity-card:hover .activity-photo {
+  transform: scale(1.07) rotate(-3deg);
+}
+.activity-photo {
+  transition: transform 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
 </style>

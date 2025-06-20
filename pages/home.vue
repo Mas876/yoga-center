@@ -7,7 +7,9 @@
     <v-main style="background-color: #6a953c;">
 
       
-        <h1>Welcome to the Yoga Center</h1>
+       <h1 class="text-h4 font-weight-bold mb-4 text-center" style="color: white;">
+  Welcome to the Yoga Center
+</h1>
 
            <!-- Photo of yoga in the montain -->
         <v-sheet
